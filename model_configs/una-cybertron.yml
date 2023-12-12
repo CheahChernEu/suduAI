@@ -1,0 +1,24 @@
+model_type: llama-cpp
+model_path: models/una-cybertron-7b-v2-bf16.Q5_K_M.gguf
+context_length: 30000
+max_tokens: 4096
+temperature: 0.0
+n_gpu_layers: 35
+last_n_tokens: 2048
+n_threads: 8         
+ 
+
+prompt_template: "<|im_start|>system
+{system_message}<|im_end|>
+<|im_start|>user
+{prompt}<|im_end|>
+<|im_start|>assistant"
+
+# prefix_template: "<|im_start|>system
+# {prefix_text} <|im_end|>"
+
+# suffix_template: "<|im_start|>user
+# {suffix_text} <|im_end|>\n<|im_start|>assistant"
+
+prefix_template: "{prefix_text}\n\n"
+suffix_template: "{suffix_text}\n\n"

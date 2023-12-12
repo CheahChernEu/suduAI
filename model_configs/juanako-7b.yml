@@ -1,0 +1,27 @@
+model_type: llama-cpp
+model_path: models/juanako-7b-una.Q5_K_M.gguf
+context_length: 10000
+max_tokens: 4096
+temperature: 0.0
+n_gpu_layers: 35
+last_n_tokens: 2048
+prompt_template: "### Assistant: {system_message}\n
+### Human: {prompt}\n
+### Assistant:"
+
+### Assistant: I am StableVicuna, a large language model created by CarperAI. I am here to chat!
+
+### Human: Explain QKV
+### Assistant:
+
+# prefix_template: "<|im_start|>system
+# {prefix_text} <|im_end|>
+
+# "
+
+# suffix_template: "<|im_start|>user
+# {suffix_text} <|im_end|>\n<|im_start|>assistant"
+
+prefix_template: "### Assistant: {prefix_text}\n\n"
+suffix_template: "### Human: {suffix_text}\n\n
+### Assistant:\n"

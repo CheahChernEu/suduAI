@@ -1,0 +1,17 @@
+model_type: llama-cpp
+model_path: models/starling-lm-7b-alpha.Q5_K_M.gguf
+context_length: 10000
+max_tokens: 2048
+temperature: 0.0
+n_gpu_layers: 50
+last_n_tokens: 2048
+prompt_template: "GPT4 User: {prompt}<|end_of_turn|>GPT4 Assistant:"
+
+# prefix_template: "<|im_start|>system
+# {prefix_text} <|im_end|>"
+
+# suffix_template: "<|im_start|>user
+# {suffix_text} <|im_end|>\n<|im_start|>assistant"
+
+prefix_template: "{prefix_text}\n\n"
+suffix_template: "{suffix_text}\n\n"
